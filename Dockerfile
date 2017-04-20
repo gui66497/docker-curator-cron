@@ -1,7 +1,7 @@
-FROM alpine:3.2
+FROM alpine:3.5
 
 RUN apk --update add python py-pip && \
-    pip install elasticsearch-curator==3.4.0
+    pip install elasticsearch-curator==5.0.1
 
 COPY ./bin /usr/local/bin
 RUN chmod +x /usr/local/bin/curator-cron
