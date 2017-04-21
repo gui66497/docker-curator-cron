@@ -4,7 +4,7 @@
 cat > /etc/periodic/daily/0-curator <<EOF
 #!/bin/sh
 
-/usr/bin/curator $@
+/usr/bin/curator --logformat logstash $@
 EOF
 
 chmod +x /etc/periodic/daily/0-curator
