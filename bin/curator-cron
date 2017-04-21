@@ -1,10 +1,12 @@
 #!/bin/sh
 
+CURATOR_CLI=${CURATOR_CLI:-/usr/bin/curator_cli}
+
 # save provided arguments
 cat > /etc/periodic/daily/0-curator <<EOF
 #!/bin/sh
 
-/usr/bin/curator_cli $@
+${CURATOR_CLI} $@
 EOF
 
 chmod +x /etc/periodic/daily/0-curator
@@ -14,4 +16,3 @@ echo "Command: curator $@"
 echo "Executing crond..."
 
 exec crond -f
-
