@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-RUN apk --update add python py-pip && \
+RUN apk --update add python py-pip curl && \
     pip install elasticsearch-curator==5.0.1 && \
     mkdir -p /root/.curator/
 
