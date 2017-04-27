@@ -1,17 +1,18 @@
 #!/bin/sh
 
+CURATOR_CLI=${CURATOR_CLI:-/usr/bin/curator_cli}
+PERIODIC_FILE=/etc/periodic/daily/50-curator
 # save provided arguments
-cat > /etc/periodic/daily/0-curator <<EOF
+cat > $PERIODIC_FILE <<EOF
 #!/bin/sh
 
-/usr/bin/curator --logformat logstash $@
+${CURATOR_CLI} $@
 EOF
 
-chmod +x /etc/periodic/daily/0-curator
+chmod +x $PERIODIC_FILE
 
-echo "Created /etc/periodic/daily/0-curator"
-echo "Command: curator $@"
+echo "Created $PERIODIC_FILE"
+echo "Command: $CURATOR_CLI $@"
 echo "Executing crond..."
 
 exec crond -f
-
