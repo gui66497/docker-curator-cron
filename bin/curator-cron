@@ -6,7 +6,7 @@ PERIODIC_FILE=/etc/periodic/daily/50-curator
 cat > $PERIODIC_FILE <<EOF
 #!/bin/sh
 
-${CURATOR_CLI} $@
+${CURATOR_CLI} --logformat logstash $@
 EOF
 
 chmod +x $PERIODIC_FILE
