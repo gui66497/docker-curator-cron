@@ -6,11 +6,12 @@ Dockerized version of [Elasticsearch Curator](https://github.com/elastic/curator
 
 ## Compatibility Matrix
 
-|Version/Branch | ES 1.x   | AWS ES 1.x | ES 2.x   | AWS ES 2.x | ES 5.x   | AWS ES 5.x |
-|--------|----------|------------|----------|------------|----------|------------|
-|    3.x   |    yes   |     yes*   |   yes    |     yes*   |   no     |     no     |
-|    4.x   |    no    |     no     |   yes    |     no     |   yes    |     ?      |
-|    5.x   |    no    |     no     |   no     |     no     |   yes    |     ?      |
+|Version/Branch | ES 1.x   | AWS ES 1.x | ES 2.x   | AWS ES 2.x | ES 5.x   | AWS ES 5.x | ES 6.x |
+|--------|----------|------------|----------|------------|----------|------------|------------|
+|    3.x   |    yes   |     yes*   |   yes    |     yes*   |   no     |     no     |     no     |
+|    4.x   |    no    |     no     |   yes    |     no     |   yes    |     no     |     no     |
+|    5.x   |    no    |     no     |   no     |     no     |   yes    |     yes*   |     no     |
+|    5.4+  |    no    |     no     |   no     |     no     |   yes    |     yes*   |     yes    |
 
 \* It appears that AWS ES does not allow access to the snapshot status endpoint for either 1.x or 2.x versions. This prevents Curator 3 from being used to make snapshots.
 
