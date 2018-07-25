@@ -1,7 +1,6 @@
 #!/bin/sh
 
 CURATOR_CLI=${CURATOR_CLI:-/usr/bin/curator}
->>>>>>> 5.4
 PERIODIC_FILE=/etc/periodic/daily/50-curator
 # save provided arguments
 cat > $PERIODIC_FILE <<EOF
