@@ -2,6 +2,7 @@
 
 Dockerized version of [Elasticsearch Curator](https://github.com/elastic/curator) run as CRON daily task. Useful for production, maintanence-free, deployment to manage time-based indices.
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/traumfewo/docker-curator-cron.svg)](https://hub.docker.com/r/traumfewo/docker-curator-cron/)
 
 
 ## Compatibility Matrix
