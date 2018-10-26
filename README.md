@@ -31,5 +31,5 @@ you would run `curator` command directly:
 You have to provide your curator job settings in a action file. Samples can be found here `https://www.elastic.co/guide/en/elasticsearch/client/curator/current/actionfile.html`
 
 ```
-docker run --rm traumfewo/docker-curator-cron:5.5 <path to ACTION_FILE.YML>
+docker run --rm traumfewo/docker-curator-cron:5.5 /root/.curator/deleteIndecies.yml
 ```
