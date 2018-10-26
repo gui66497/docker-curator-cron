@@ -6,5 +6,6 @@ RUN apk --update add python py-pip curl && \
 
 COPY ./bin /usr/local/bin
 COPY curator.yml /root/.curator/
+COPY deleteIndecies.yml /root/.curator/
 
 ENTRYPOINT ["/usr/local/bin/curator-cron"]
